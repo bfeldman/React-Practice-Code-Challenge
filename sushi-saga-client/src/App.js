@@ -23,7 +23,7 @@ class App extends Component {
   }
   
   handleSushiEat = (sushiObj) => {
-    if (!this.state.platesEaten.includes(sushiObj) && this.state.moneyInWallet > sushiObj.price) {
+    if (!this.state.platesEaten.includes(sushiObj) && this.state.moneyInWallet >= sushiObj.price) {
       this.setState({
         platesEaten: this.state.platesEaten.concat(sushiObj),
         moneyInWallet: this.state.moneyInWallet - sushiObj.price
